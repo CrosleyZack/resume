@@ -35,7 +35,7 @@
 \newcommand{\sectionfont}{\fontsize{12pt}{12pt}\color{white}\bfseries}
 \setlength{\fboxsep}{0.2em}
 \setlength{\fboxrule}{0pt}
-\titlespacing{\section}{0pt}{0pt}{0pt}
+\titlespacing{\section}{0pt}{0pt}{0.25em}
 \titleformat{\section}
   [display]
   {\sectionfont}%\begin{spacing}{0.5}}
