@@ -55,7 +55,7 @@
   
 % Format subsubsection header
 \newcommand{\paragraphfont}{\fontsize{11pt}{11pt}\color{secondary}}
-\titlespacing{\paragraph}{0pt}{0.3em}{0.3em}
+\titlespacing{\paragraph}{0pt}{0.3em}{0.5em}
 \titleformat{\paragraph}
   [display]
   {\paragraphfont}%\begin{spacing}{0.75}}
