@@ -38,8 +38,8 @@
 \titlespacing{\section}{0pt}{0pt}{0.25em}
 \titleformat{\section}
   [display]
-  {\sectionfont}%\begin{spacing}{0.5}}
-  {}%\end{spacing}}
+  {\sectionfont}
+  {}
   {0pt}
   {\colorbox{accent}{\fbox{\parbox{\textwidth}{\MakeUppercase{#1}}}}}
 
@@ -48,8 +48,8 @@
 \titlespacing{\subsection}{0pt}{0.5em}{0.5em}
 \titleformat{\subsection}
   [display]
-  {\subsectionfont}%\begin{spacing}{0.75}}
-  {}%\end{spacing}}
+  {\subsectionfont}
+  {}
   {0pt}
   {\MakeUppercase{#1}}
   
@@ -64,8 +64,8 @@
                                 \tmp}}
 \titleformat{\paragraph}
   [display]
-  {\paragraphfont}%\begin{spacing}{0.75}}
-  {}%\end{spacing}}
+  {\paragraphfont}
+  {}
   {0pt}
   {\printheader{#1}}
   
