@@ -12,6 +12,9 @@
 \RequirePackage[explicit]{titlesec}
 % Add tcolorbox for colorful sections, titles
 \RequirePackage{xcolor}
+% Multi column package for condensed sections
+\RequirePackage{multicol}
+\RequirePackage{enumitem}
 
 % Declare counter for use in template
 \newcounter{mycount}
@@ -87,3 +90,11 @@
 
 % Format publication.
 \newcommand{\publication}[1]{\vspace{0.75em}\fontsize{11pt}{11pt}\color{secondary}\normalfont#1\par\vspace{0.1em}}
+
+% Print out a list of items in multiple columns.
+\newcommand{\skills}[1]{\begin{multicols}{4}
+                            \begin{itemize}[leftmargin=*]
+                              \@for\ltmp:=#1\do{
+                                \item[] \ltmp}
+                            \end{itemize}
+                        \end{multicols}}
