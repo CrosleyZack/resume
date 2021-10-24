@@ -84,3 +84,6 @@
                                   \stepcounter{mycount}
                                   \MakeUppercase{\stmp}}}
 \newcommand{\resumecontact}[1]{\subtitlefont{\printsubtitle{#1}}}
+
+% Format publication.
+\newcommand{\publication}[1]{\vspace{0.75em}\fontsize{11pt}{11pt}\color{secondary}\normalfont#1\par\vspace{0.1em}}
