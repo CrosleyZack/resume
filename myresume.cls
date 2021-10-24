@@ -12,9 +12,9 @@
 \RequirePackage[explicit]{titlesec}
 % Add tcolorbox for colorful sections, titles
 \RequirePackage{xcolor}
-% Adjust line spacing
-% \usepackage{setspace}
-% \setstretch{1}
+
+% Declare counter for use in template
+\newcounter{mycount}
 
 % define color for resume
 \definecolor{accent}{RGB}{209, 99, 73}
@@ -56,12 +56,18 @@
 % Format subsubsection header
 \newcommand{\paragraphfont}{\fontsize{11pt}{11pt}\color{secondary}}
 \titlespacing{\paragraph}{0pt}{0.3em}{0.5em}
+%   looper to print out items.
+\newcommand{\printheader}[1]{\setcounter{mycount}{0}
+                             \@for\tmp:=#1\do{
+                                \ifnum \value{mycount}>0 {\hspace{0.1in}·\hspace{0.1in}} \fi
+                                \stepcounter{mycount}
+                                \tmp}}
 \titleformat{\paragraph}
   [display]
   {\paragraphfont}%\begin{spacing}{0.75}}
   {}%\end{spacing}}
   {0pt}
-  {#1}
+  {\printheader{#1}}
   
 % Format Title
 \newcommand{\titlefont}{\fontsize{26pt}{26pt}\color{accent}\normalfont\MakeUppercase}
@@ -70,5 +76,11 @@
                             \end{flushleft}}
                             
 % Format Subtitle
-\newcommand{\subtitlefont}{\fontsize{11pt}{11pt}\color{secondary}\normalfont\MakeUppercase}
-\newcommand{\resumecontact}[1]{\subtitlefont{#1}}
+\newcommand{\subtitlefont}{\fontsize{11pt}{11pt}\color{secondary}\normalfont}
+%     looper to print out subtitle.
+\newcommand{\printsubtitle}[1]{\setcounter{mycount}{0}
+                               \@for\stmp:=#1\do{
+                                  \ifnum \value{mycount}>0 {\hspace{0.2in}|\hspace{0.2in}} \fi
+                                  \stepcounter{mycount}
+                                  \MakeUppercase{\stmp}}}
+\newcommand{\resumecontact}[1]{\subtitlefont{\printsubtitle{#1}}}
