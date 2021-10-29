@@ -15,6 +15,9 @@
 % Multi column package for condensed sections
 \RequirePackage{multicol}
 \RequirePackage{enumitem}
+% Set line spacing
+\usepackage{setspace}
+\setstretch{1.15}
 
 % Declare counter for use in template
 \newcounter{mycount}
@@ -38,7 +41,7 @@
 \newcommand{\sectionfont}{\fontsize{12pt}{12pt}\color{white}\bfseries}
 \setlength{\fboxsep}{0.2em}
 \setlength{\fboxrule}{0pt}
-\titlespacing{\section}{0pt}{0pt}{0.25em}
+\titlespacing{\section}{0pt}{0pt}{0.15em}
 \titleformat{\section}
   [display]
   {\sectionfont}
@@ -48,7 +51,7 @@
 
 % Format subsection header
 \newcommand{\subsectionfont}{\fontsize{12pt}{12pt}\color{accent}}
-\titlespacing{\subsection}{0pt}{0.5em}{0.5em}
+\titlespacing{\subsection}{0pt}{0.21em}{0.35em}
 \titleformat{\subsection}
   [display]
   {\subsectionfont}
@@ -58,7 +61,7 @@
   
 % Format subsubsection header
 \newcommand{\paragraphfont}{\fontsize{11pt}{11pt}\color{secondary}}
-\titlespacing{\paragraph}{0pt}{0.3em}{0.5em}
+\titlespacing{\paragraph}{0pt}{0.21em}{0.35em}
 %   looper to print out items.
 \newcommand{\printheader}[1]{\setcounter{mycount}{0}
                              \@for\tmp:=#1\do{
