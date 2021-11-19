@@ -1,22 +1,20 @@
 \subsection{Operations Research Analyst GS-12}
 \paragraph{The Research and Analysis Center,Army Futures Command,May 2018 -- Present}
-Served as developer on a Combined Arms Analysis Tool for the 21st Century (COMBATXXI), a stochastic (Monte Carlo), high resolution, closed-form, discrete event combat simulation.
-Created a navigation suite in Python to aid in rapid implementation of maneuver behaviors.
-Navigation suite was a graph data structure loaded from terrain, including user defined routes, terrain embedded roads, and buildings.
-Graph data structure stored dictionary on nodes and edges to facilitate intelligent searching and knowledge management.
-Operations on graph data structure implemented using functional programming approach, utilizing memoization and lazy evaluation for efficiency.
-Implemented multiple search methods (A*, Djikstra, Ant Colony Optimization) and heuristics to perform graph searches.
+\begin{itemize}
+    \item Served as developer on a Combined Arms Analysis Tool for the 21st Century (COMBATXXI), a stochastic (Monte Carlo), high resolution, closed-form, discrete event combat simulation.
+    \item Developed a navigation suite in Python to aid in rapid implementation of maneuver behaviors. Library estimated to have saved hundreds of man hours of scenario development per scenario. 
+    \item Created a graph data structure loaded from terrain, storing contextual data (trafficability, node or edge type) for nodes and edges to facilitate intelligent searching and knowledge management.
+    \item Optimized graph via functional programming approach with memoization and lazy evaluation.
+    \item Implemented search methods (A*, Djikstra, Ant Colony Optimization) and heuristics to create paths.
+    \item Designed path manipulation algorithms to produce unit maneuver order stacks from path.
+    \item Developed Utility AI framework to enable user-defined utility measures (single dual), considerations (state variables), normalizations, aggregation (combining components into utility measure), and selection methods based on publications by Kevin Dill (Lockheed Martin).
+    \item Implemented autonomous behaviors using utility framework, such as engagement decisions.
+    \item Developed terrain reasoning methodology as sequential discrete terrain sampling and utility evaluation based on paper by Eric Johnson (Electronic Arts).
+    \item Utilized Terrain Reasoning to develop advanced behaviors, such as an automated tank defilade.
+    \item Led efforts to develop high-fidelity Directed Energy Weapon COMBATXXI representation. Coordinated with external agencies and shareholders to define modeling requirements and approach.
+    \item Led model development for an analysis alternative study. Attended study meetings to identify required model enhancements and coordinated with integration team on scenario implementation.
+\end{itemize}
+
 % Heuristics included utility-based path evaluation method to create tactically correct urban maneuvers.
-Path manipulation algorithms developed to create bounding maneuver order stack from path.
 % Navigation suite was used to speed up integration of combat scenarios by hundreds of hours each study.
-Developed framework for Utility AI based on publications by Kevin Dill.
-Framework enabled the definition of utility considerations (model state variables) for use in calculations.
-Users defined utility measure (single or dual utility), normalization method for each consideration, aggregation methodology for combining considerations into single value, and selection method for choosing action from utility measures (absolute, relative).
-Utility was used to develop numerous autonomous behaviors, particularly engagement decisions.
-Utility was also used as a methodology for implementing terrain reasoning.
-Terrain reasoning developed as a sequence of sampling terrain and evaluating locations based on utility.
-Environment querying was used to create UAS swarm behaviors and automated tank defilade.
-Lead developer on implementing directed energy weapons in combat model.
-Led definition of approach and worked with analysts to determine feasible, high-fidelity implementation.
-Served as lead developer for analysis of alternative study, responsible for developing model changes required for the study measurement space.
 % Developed administrative tool for COMBATXXI packaged scenarios to generate alternatives from a base scenario.

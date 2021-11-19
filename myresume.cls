@@ -19,6 +19,9 @@
 \usepackage{setspace}
 \setstretch{1.15}
 
+% set spacing for itemized lists
+\setlist[itemize]{leftmargin=*,nosep,itemsep=0.12em}
+
 % Declare counter for use in template
 \newcounter{mycount}
 
@@ -41,7 +44,7 @@
 \newcommand{\sectionfont}{\fontsize{12pt}{12pt}\color{white}\bfseries}
 \setlength{\fboxsep}{0.2em}
 \setlength{\fboxrule}{0pt}
-\titlespacing{\section}{0pt}{0pt}{0.15em}
+\titlespacing{\section}{0pt}{0pt}{0.25em}
 \titleformat{\section}
   [display]
   {\sectionfont}
@@ -51,7 +54,7 @@
 
 % Format subsection header
 \newcommand{\subsectionfont}{\fontsize{12pt}{12pt}\color{accent}}
-\titlespacing{\subsection}{0pt}{0.21em}{0.35em}
+\titlespacing{\subsection}{0pt}{0em}{0.35em}
 \titleformat{\subsection}
   [display]
   {\subsectionfont}
@@ -61,7 +64,7 @@
   
 % Format subsubsection header
 \newcommand{\paragraphfont}{\fontsize{11pt}{11pt}\color{secondary}}
-\titlespacing{\paragraph}{0pt}{0.21em}{0.35em}
+\titlespacing{\paragraph}{0pt}{0.21em}{0.45em}
 %   looper to print out items.
 \newcommand{\printheader}[1]{\setcounter{mycount}{0}
                              \@for\tmp:=#1\do{
@@ -95,8 +98,8 @@
 \newcommand{\publication}[1]{\vspace{0.75em}\fontsize{11pt}{11pt}\color{secondary}\normalfont#1\par\vspace{0.1em}}
 
 % Print out a list of items in multiple columns.
-\newcommand{\skills}[1]{\begin{multicols}{4}
-                            \begin{itemize}[leftmargin=*]
+\newcommand{\skills}[1]{\begin{multicols}{5}
+                            \begin{itemize}
                               \@for\ltmp:=#1\do{
                                 \item[] \ltmp}
                             \end{itemize}
