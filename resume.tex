@@ -2,20 +2,26 @@
 % Temp lipsum for testing.
 \usepackage{lipsum}
 
+
+% TODO 
+%   Add spacing between experience blocks
+%   Remove spacing around publications.
+%   Remove hanging line on next page from student researcher
+
 \begin{document}
 
 \resumename{Zackary Crosley}
 \resumecontact{New Mexico,mail@crosleyzack.com,925.550.6184,crosleyzack.com}
 
 \section{Education}
-
+ 
 \input{education/masters}
 \input{education/bachelors}
 
 \section{Experience}
 
 \input{experience/trac}
-\input{experience/sefcom}
+\input{experience/sefcom} \pagebreak
 \input{experience/nawcad}
 \input{experience/orsamac}
 
@@ -29,7 +35,7 @@
 \skills{Python,Java,C++,Clojure,Julia,SQL,Linux,Bash,LaTeX,Pandas,Numpy,Scapy,Pwntools,Neo4j,OpenMP}
 
 \section{Honors and Activities}
-
+\vspace{3mm} % TODO not sure how to make this unnecessary.
 \input{honors/trac.tex}
 \input{honors/education.tex}
 \input{honors/volunteer.tex}

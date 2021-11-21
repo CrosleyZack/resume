@@ -3,9 +3,9 @@
 % Base this off the article class
 \LoadClass{article}
 % Set font family.
-% \usepackage[default]{sourcecodepro}
-\RequirePackage[default]{opensans}
+\RequirePackage{lmodern}
 \RequirePackage[T1]{fontenc}
+\renewcommand{\familydefault}{\sfdefault}
 % set page margins.
 \RequirePackage[margin=0.75in]{geometry}
 % titlesec to format sections, titles.
@@ -16,86 +16,126 @@
 \RequirePackage{multicol}
 \RequirePackage{enumitem}
 % Set line spacing
-\usepackage{setspace}
-\setstretch{1.15}
+\RequirePackage{setspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Constants for use in template.
+% Edit here to adjust template!
+\definecolor{accent}{RGB}{209, 99, 73}
+\definecolor{secondary}{RGB}{45, 45, 45}
+\newcommand{\resumeLineSpacing}{1.05}
+%   Font sizes
+\newcommand{\mainFontSize}{12pt}
+\newcommand{\sectionFontSize}{12pt}
+\newcommand{\subsectionFontSize}{12pt}
+\newcommand{\subtitleFontSize}{12pt}
+\newcommand{\titleFontSize}{26pt}
+%   Itemize object
+\newcommand{\itemizeItemSeparation}{0.5mm}
+\newcommand{\beforeItemizeSpacing}{1mm}
+\newcommand{\afterItemizeSpacing}{1mm}
+%   Multicol object
+\newcommand{\multicolSpacing}{1mm}
+%   Delimiter spacing
+\newcommand{\subtitleDelimSpacing}{3mm}
+\newcommand{\paragraphDelimSpacing}{1mm}
+%   Section object
+\newcommand{\sectionBgPadding}{0.75mm}
+\newcommand{\beforeSection}{0mm}
+\newcommand{\afterSection}{0mm}
+%   SubSection Object
+\newcommand{\beforeSubSection}{0mm}
+\newcommand{\afterSubSection}{1mm}
+%   Paragraph Object
+\newcommand{\beforeParagraph}{0mm}
+\newcommand{\afterParagraph}{1mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%   Remove Other spacing
+%   NOTE even with all spacing set to 0, there is still inherent
+%        spacing from using \titleformat with display style.
+%        Unfortunately, simply switching to block or any other style
+%        creates different problems.
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{0mm}
+\setlength{\baselineskip}{0mm}
+\setlength{\abovedisplayskip}{0mm}
+\setlength{\belowdisplayskip}{0mm}
+\setlength{\abovedisplayshortskip}{0mm}
+\setlength{\belowdisplayshortskip}{0mm}
+\setlength{\topskip}{0mm}
+\setlength{\multicolsep}{\multicolSpacing}
+\lineskiplimit=-\maxdimen
+
+% Set article line spacing [Value specified above]
+\setstretch{\resumeLineSpacing}
 
 % set spacing for itemized lists
-\setlist[itemize]{leftmargin=*,nosep,itemsep=0.12em}
+\setlist[itemize]{leftmargin=*,nosep,
+                  itemsep=\itemizeItemSeparation,
+                  before=\vspace{\beforeItemizeSpacing},
+                  after=\vspace{\afterItemizeSpacing}}
 
 % Declare counter for use in template
 \newcounter{mycount}
 
-% define color for resume
-\definecolor{accent}{RGB}{209, 99, 73}
-\definecolor{secondary}{RGB}{45, 45, 45}
+% Set resume default color.
 \color{secondary}
 
-% Set spacing
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{0pt}
-\setlength{\baselineskip}{0pt}
-\setlength{\abovedisplayskip}{0pt}
-\setlength{\belowdisplayskip}{0pt}
-\setlength{\abovedisplayshortskip}{0pt}
-\setlength{\belowdisplayshortskip}{0pt}
-\lineskiplimit=-\maxdimen
-
 % Format section header
-\newcommand{\sectionfont}{\fontsize{12pt}{12pt}\color{white}\bfseries}
-\setlength{\fboxsep}{0.2em}
-\setlength{\fboxrule}{0pt}
-\titlespacing{\section}{0pt}{0pt}{0.25em}
+\newcommand{\sectionfont}{\fontsize{\sectionFontSize}{\sectionFontSize}\color{white}\bfseries}
+\setlength{\fboxsep}{\sectionBgPadding}
+\setlength{\fboxrule}{0mm}
+\titlespacing{\section}{0mm}{\beforeSection}{\afterSection}
 \titleformat{\section}
   [display]
   {\sectionfont}
   {}
-  {0pt}
+  {0mm}
   {\colorbox{accent}{\fbox{\parbox{\textwidth}{\MakeUppercase{#1}}}}}
 
 % Format subsection header
-\newcommand{\subsectionfont}{\fontsize{12pt}{12pt}\color{accent}}
-\titlespacing{\subsection}{0pt}{0em}{0.35em}
+\newcommand{\subsectionfont}{\fontsize{\subsectionFontSize}{\subsectionFontSize}\color{accent}}
+\titlespacing{\subsection}{0mm}{\beforeSubSection}{\afterSubSection}
 \titleformat{\subsection}
   [display]
   {\subsectionfont}
   {}
-  {0pt}
+  {0mm}
   {\MakeUppercase{#1}}
   
-% Format subsubsection header
-\newcommand{\paragraphfont}{\fontsize{11pt}{11pt}\color{secondary}}
-\titlespacing{\paragraph}{0pt}{0.21em}{0.45em}
+% Format paragraph header
+\newcommand{\paragraphfont}{\fontsize{\mainFontSize}{\mainFontSize}\color{secondary}}
+\titlespacing{\paragraph}{0mm}{\beforeParagraph}{\afterParagraph}
 %   looper to print out items.
 \newcommand{\printheader}[1]{\setcounter{mycount}{0}
                              \@for\tmp:=#1\do{
-                                \ifnum \value{mycount}>0 {\hspace{0.1in}·\hspace{0.1in}} \fi
+                                \ifnum \value{mycount}>0 {\hspace{\paragraphDelimSpacing}·\hspace{\paragraphDelimSpacing}} \fi
                                 \stepcounter{mycount}
                                 \tmp}}
 \titleformat{\paragraph}
   [display]
   {\paragraphfont}
   {}
-  {0pt}
+  {0mm}
   {\printheader{#1}}
   
 % Format Title
-\newcommand{\titlefont}{\fontsize{26pt}{26pt}\color{accent}\normalfont\MakeUppercase}
+\newcommand{\titlefont}{\fontsize{\titleFontSize}{\titleFontSize}\color{accent}\normalfont\MakeUppercase}
 \newcommand{\resumename}[1]{\begin{flushleft}
                               \titlefont{#1}
                             \end{flushleft}}
                             
 % Format Subtitle
-\newcommand{\subtitlefont}{\fontsize{11pt}{11pt}\color{secondary}\normalfont}
+\newcommand{\subtitlefont}{\fontsize{\subtitleFontSize}{\subtitleFontSize}\color{secondary}\normalfont}
 %     looper to print out subtitle.
 \newcommand{\printsubtitle}[1]{\setcounter{mycount}{0}
                                \@for\stmp:=#1\do{
-                                  \ifnum \value{mycount}>0 {\hspace{0.2in}|\hspace{0.2in}} \fi
+                                  \ifnum \value{mycount}>0 {\hspace{\subtitleDelimSpacing}|\hspace{\subtitleDelimSpacing}} \fi
                                   \stepcounter{mycount}
                                   \MakeUppercase{\stmp}}}
 \newcommand{\resumecontact}[1]{\subtitlefont{\printsubtitle{#1}}}
-
-% Format publication.
-\newcommand{\publication}[1]{\vspace{0.75em}\fontsize{11pt}{11pt}\color{secondary}\normalfont#1\par\vspace{0.1em}}
 
 % Print out a list of items in multiple columns.
 \newcommand{\skills}[1]{\begin{multicols}{5}
