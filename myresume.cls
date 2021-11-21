@@ -39,6 +39,8 @@
 \RequirePackage{enumitem}
 % Set line spacing
 \RequirePackage{setspace}
+% Font awesome for social logos.
+\RequirePackage{fontawesome5}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Constants for use in template.
