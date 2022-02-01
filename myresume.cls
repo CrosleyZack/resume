@@ -62,7 +62,7 @@
 \newcommand{\multicolSpacing}{1mm}
 %   Delimiter spacing
 \newcommand{\subtitleDelimSpacing}{3mm}
-\newcommand{\paragraphDelimSpacing}{1mm}
+\newcommand{\paragraphDelimSpacing}{0mm}
 %   Section object
 \newcommand{\sectionBgPadding}{0.75mm}
 \newcommand{\beforeSection}{0mm}
