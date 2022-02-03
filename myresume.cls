@@ -55,9 +55,12 @@
 \newcommand{\subtitleFontSize}{12pt}
 \newcommand{\titleFontSize}{26pt}
 %   Itemize object
-\newcommand{\itemizeItemSeparation}{0.5mm}
+\newcommand{\itemizeItemSeparation}{0.75mm}
 \newcommand{\beforeItemizeSpacing}{1mm}
 \newcommand{\afterItemizeSpacing}{1mm}
+\newcommand{\beforeSubItemizeSpacing}{0.5mm}
+\newcommand{\afterSubItemizeSpacing}{0.5mm}
+\newcommand{\bulletIndent}{1mm}
 %   Multicol object
 \newcommand{\multicolSpacing}{1mm}
 %   Delimiter spacing
@@ -96,10 +99,19 @@
 \setstretch{\resumeLineSpacing}
 
 % set spacing for itemized lists
-\setlist[itemize]{leftmargin=*,nosep,
-                  itemsep=\itemizeItemSeparation,
-                  before=\vspace{\beforeItemizeSpacing},
-                  after=\vspace{\afterItemizeSpacing}}
+\setlist[itemize]{nosep,
+                  itemsep=\itemizeItemSeparation}
+\setlist[itemize, 1]{leftmargin=*,
+                     before=\vspace{\beforeItemizeSpacing},
+                     after=\vspace{\afterItemizeSpacing},
+                     labelsep=\bulletIndent,
+                     label=\textbullet}
+\setlist[itemize, 2]{before=\vspace{\beforeSubItemizeSpacing},
+                     after=\vspace{\afterSubItemizeSpacing},
+                     labelsep=\bulletIndent,
+                     label=\textbullet,
+                     leftmargin=3.5mm}
+            
 
 % Declare counter for use in template
 \newcounter{mycount}
