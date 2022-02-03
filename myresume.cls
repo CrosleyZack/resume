@@ -99,18 +99,17 @@
 \setstretch{\resumeLineSpacing}
 
 % set spacing for itemized lists
-\setlist[itemize]{nosep,
+\setlist[itemize]{leftmargin=*,
+                  nosep,
                   itemsep=\itemizeItemSeparation}
-\setlist[itemize, 1]{leftmargin=*,
-                     before=\vspace{\beforeItemizeSpacing},
+\setlist[itemize, 1]{before=\vspace{\beforeItemizeSpacing},
                      after=\vspace{\afterItemizeSpacing},
                      labelsep=\bulletIndent,
                      label=\textbullet}
 \setlist[itemize, 2]{before=\vspace{\beforeSubItemizeSpacing},
                      after=\vspace{\afterSubItemizeSpacing},
                      labelsep=\bulletIndent,
-                     label=\textbullet,
-                     leftmargin=3.5mm}
+                     label=\textbullet}
             
 
 % Declare counter for use in template
