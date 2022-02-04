@@ -55,7 +55,8 @@
 \newcommand{\subtitleFontSize}{12pt}
 \newcommand{\titleFontSize}{26pt}
 %   Itemize object
-\newcommand{\itemizeItemSeparation}{0.75mm}
+\newcommand{\itemizeItemSeparation}{1.1mm}
+\newcommand{\itemizeSubItemSeparation}{0.5mm}
 \newcommand{\beforeItemizeSpacing}{1mm}
 \newcommand{\afterItemizeSpacing}{1mm}
 \newcommand{\beforeSubItemizeSpacing}{0.5mm}
@@ -100,16 +101,17 @@
 
 % set spacing for itemized lists
 \setlist[itemize]{leftmargin=*,
-                  nosep,
-                  itemsep=\itemizeItemSeparation}
+                  nosep}
 \setlist[itemize, 1]{before=\vspace{\beforeItemizeSpacing},
                      after=\vspace{\afterItemizeSpacing},
                      labelsep=\bulletIndent,
-                     label=\textbullet}
+                     label=\textbullet,
+                     itemsep=\itemizeItemSeparation}
 \setlist[itemize, 2]{before=\vspace{\beforeSubItemizeSpacing},
                      after=\vspace{\afterSubItemizeSpacing},
                      labelsep=\bulletIndent,
-                     label=\textbullet}
+                     label=\textbullet,
+                     itemsep=\itemizeSubItemSeparation}
             
 
 % Declare counter for use in template
