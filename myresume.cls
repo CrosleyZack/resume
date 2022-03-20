@@ -55,12 +55,12 @@
 \newcommand{\subtitleFontSize}{12pt}
 \newcommand{\titleFontSize}{26pt}
 %   Itemize object
-\newcommand{\itemizeItemSeparation}{1.1mm}
+\newcommand{\itemizeItemSeparation}{1mm}
 \newcommand{\itemizeSubItemSeparation}{0.5mm}
-\newcommand{\beforeItemizeSpacing}{1.2mm}
-\newcommand{\afterItemizeSpacing}{1.2mm}
-\newcommand{\beforeSubItemizeSpacing}{0.8mm}
-\newcommand{\afterSubItemizeSpacing}{0.8mm}
+\newcommand{\beforeItemizeSpacing}{1mm}
+\newcommand{\afterItemizeSpacing}{1mm}
+\newcommand{\beforeSubItemizeSpacing}{0.5mm}
+\newcommand{\afterSubItemizeSpacing}{0.5mm}
 \newcommand{\bulletIndent}{1mm}
 %   Multicol object
 \newcommand{\multicolSpacing}{1mm}
