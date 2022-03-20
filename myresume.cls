@@ -57,10 +57,10 @@
 %   Itemize object
 \newcommand{\itemizeItemSeparation}{1.1mm}
 \newcommand{\itemizeSubItemSeparation}{0.5mm}
-\newcommand{\beforeItemizeSpacing}{1mm}
-\newcommand{\afterItemizeSpacing}{1mm}
-\newcommand{\beforeSubItemizeSpacing}{0.9mm}
-\newcommand{\afterSubItemizeSpacing}{0.9mm}
+\newcommand{\beforeItemizeSpacing}{1.2mm}
+\newcommand{\afterItemizeSpacing}{1.2mm}
+\newcommand{\beforeSubItemizeSpacing}{0.8mm}
+\newcommand{\afterSubItemizeSpacing}{0.8mm}
 \newcommand{\bulletIndent}{1mm}
 %   Multicol object
 \newcommand{\multicolSpacing}{1mm}
