@@ -55,8 +55,8 @@
 \newcommand{\subtitleFontSize}{12pt}
 \newcommand{\titleFontSize}{26pt}
 %   Itemize object
-\newcommand{\itemizeItemSeparation}{1mm}
-\newcommand{\itemizeSubItemSeparation}{0.5mm}
+\newcommand{\itemizeItemSeparation}{1.1mm}
+\newcommand{\itemizeSubItemSeparation}{0.75mm}
 \newcommand{\beforeItemizeSpacing}{1mm}
 \newcommand{\afterItemizeSpacing}{1mm}
 \newcommand{\beforeSubItemizeSpacing}{0.5mm}
