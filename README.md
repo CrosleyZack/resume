@@ -1,8 +1,8 @@
-* Description
+# Description
 
 Resume template developed by Zack Crosley. Template available for use under MIT License.
 
-* Dependencies
+# Dependencies
 
 Requires TeX Live, TeX Live Formats Extra, and latexmk.
 
