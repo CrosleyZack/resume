@@ -40,6 +40,7 @@
 % Set line spacing
 \RequirePackage{setspace}
 % Font awesome for social logos.
+% TODO - update to fontawesome6
 \RequirePackage{fontawesome5}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
