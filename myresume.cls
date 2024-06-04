@@ -39,6 +39,8 @@
 \RequirePackage{enumitem}
 % Set line spacing
 \RequirePackage{setspace}
+% hyperlinks
+\RequirePackage[hidelinks]{hyperref}
 % Font awesome for social logos.
 % TODO - update to fontawesome6
 \RequirePackage{fontawesome5}
