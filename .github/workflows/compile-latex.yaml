@@ -1,8 +1,5 @@
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - master
 jobs:
   build_latex:
     name: "build pdf"
@@ -20,4 +17,4 @@ jobs:
           git config user.email crosleyzack@gmail.com
           git add -f resume.pdf
           git diff --quiet && git diff --staged --quiet || git commit -m "[gh-action] Compile Resume"
-          git push origin main
+          git push origin master
