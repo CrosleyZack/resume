@@ -1,9 +1,14 @@
 \subsection{Software Engineer II}
-\paragraph{Engineering,\href{https://censys.com}{Censys Inc},Jun 2022 -- Present}
+\paragraph{Engineering,\href{https://censys.com}{Censys Inc},Jun 2022 -- May 2025}
 \begin{itemize}
-    \item Served on Risks team developing APIs and pipelines for \href{https://censys.com/exposure-management/}{Exposure Management} product.
-    \item Developed diagrams, documentation, CI/CD, protocols, and kubernetes configs for APIs/microservices.
-    \item Maintained applications with updated features, improved testing, bug fixes, and better abstractions.
+    % \item Served on Risks team developing APIs and pipelines for \href{https://censys.com/exposure-management/}{Exposure Management} product.
+    \item Developed APIs, pipelines, and architecture for \href{https://censys.com/exposure-management/}{Exposure Management} and \href{censys.com/platform}{Platform} product.
+    \item Created diagrams, documentation, CI/CD, protocols, and kubernetes configs for APIs/microservices.
+    \item Designed and built service to purchase and track credits in Platform. Cron handled expiring and reloading credits as appropriate for a given customer. Generated daily reports of credit usage and purchases for product, marketing, and sales.
+    \item Created \href{https://github.com/formancehq/ledger/commit/08f8e2aecc051fceea05d2e5b704436baf4f5005}{PR} for \href{https://github.com/formancehq/ledger}{Formance Ledger} backend used by Censys Consumption system to implement features required for our use case.
+    \item Worked with junior engineers to assign them tasks, review their code, and help them grow as engineers.
+    \item Developed unique CLI for Censys which used \href{https://github.com/charmbracelet/bubbletea}{Bubble Tea} to present a dashboard and navigable tree output, simplifying API adoption.
+    % \item Maintained applications with updated features, improved testing, bug fixes, and better abstractions.
     % \item Developed Golang microservices, aggregated data from various sources, load Postgres/Spanner databases, publish events to Google PubSub, and serve indexed data over gRPC and REST endpoints.
     % \item Developed Golang microservices interfacing with gRPC APIs, Postgres/Spanner databases, and Google Pub/Sub.
     % \item Defined Protocol Buffers, CI/CD pipelines, and Kubernetes configuration for microservices.
@@ -12,7 +17,7 @@
     \item Built Risk Type service to poll various services for changes and update Postgres risk datastore, reducing update time from a full day to minutes.
     \item Designed and developed pipeline for CVE Risks pulling NVD and host data over gRPC, generating risk definition, posting annotations over Pub/Sub, and storing into Google Spanner.
     \item Developed efficient and hierachical user configurations in Google Spanner using interleaved tables.
-    \item Researched new vulnerabilities and produced fingerprints to identify vulnerable systems in Censys data.
+    % \item Researched new vulnerabilities and produced fingerprints to identify vulnerable systems in Censys data.
     \item Developed procedure for fingeprinting risks that reduced code repetition and improved performance. Used this methodology to quickly add dozens of fingerprints in response to vulnerability announcement.
     \item Created library of shared code within risks improving code quality and removing thousands of lines.
     % \item Implemented software test suites using local containers and mocks to ensure correctness.
